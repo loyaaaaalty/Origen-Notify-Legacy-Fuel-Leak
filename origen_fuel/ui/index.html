@@ -1,0 +1,46 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ca219d6f72.js" crossorigin="anonymous"></script>
+    <link href="./style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Origen Fuel NUI</title>
+</head>
+<body>
+    <div class="fuelManage row" style="display: none;">
+        <div class="text-center" id="title"><h1><i class="fa-solid fa-gas-pump"></i> SURTIDOR</h1></div>
+        
+        <div class="row">
+            <div class="col-md-3">
+                <div class="fuelProgbar">
+                    <div class="depotProgbar"></div>
+                    <div class="newProgbar"></div>
+                </div>
+            </div>
+            
+            <div class="col-md-9">
+                <div class="d-flex flex-column text-center mt-5" id="qttyToAdd">
+                    <label for="name">INTRODUCE LA CANTIDAD</label>
+                    <div class="d-flex justify-content-center"><input type="number" id="name" name="name" required minlength="4" maxlength="8" size="10"> <h1>L</h1></div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3" id="qttyToPay">TOTAL <h5 id="toPay">0$</h5></div>
+        <div class="buttonZone mt-4 d-flex justify-content-around">
+            <div class="buyButton">ACEPTAR COMPRA</div>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
+
+

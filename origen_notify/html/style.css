@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root {
+	--color-primary: #ff0052;
+	--color-secondary: #cf00a2;
+	--anim-cubic: cubic-bezier(0, 0.605, 0.145, 1.005);
+}
+
+body {
+	overflow: hidden;
+	margin: 0;
+}
+
+@font-face {
+	font-family: bankgothic;
+	src: url('./bankgothic.ttf');
+}
+
+.shake {
+	/*animation-name:shake-slow;animation-duration:20s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;overflow:hidden;*/
+}
+
+.titulo {
+	/* width: max-content;
+    position: absolute;
+    top: -1.45vw;
+    right: .5vw;
+    font-family: bankgothic;
+    font-size: .7vw;
+    color: white;
+    text-align: center;
+    background-color: #000000fa;
+    box-shadow: 0 0 10px #0000007a;
+    padding: .2vw .4vw;
+    border-radius: 5px 5px 0 0;
+    text-transform: uppercase;
+    border: .1vw solid #00000073;
+    border-bottom: none;
+    padding-left: 1.9vw;
+    line-height: 0.8vw;
+    height: 0.9vw;
+    display: block;
+    float: right;
+    animation: entrada-titulo 0.5s cubic-bezier(0.000, 0.405, 0.245, 1.470) forwards;
+    transform:translateX(2vw);
+    opacity:0;
+    animation-delay:0.1s; */
+	padding: 0.5vh;
+	display: flex;
+	align-items: center;
+}
+
+.titulo__helpbar {
+	position: absolute;
+	top: -2.4vh;
+	padding: 0.2vw;
+	right: 0;
+	font-family: bankgothic;
+	font-size: 0.7vw;
+	color: black;
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 0 10px white;
+}
+
+.shake-help {
+	right: 4.5vh;
+	top: 10vh;
+	position: absolute;
+	overflow: visible !important;
+}
+
+.icono {
+	width: 29px;
+	float: left;
+	height: 100%;
+	animation: zoom 1s cubic-bezier(0, 0.445, 0.24, 1.365) infinite;
+}
+
+.inclinacion {
+	padding: 10px;
+	position: fixed;
+	bottom: 5px;
+	right: 32px;
+	width: 300px;
+	overflow: visible !important;
+	height: 100%;
+}
+
+#noty_layout__bottomRight {
+	/* margin: 0;
+    padding: 0;
+    z-index: 9999999;
+
+    backface-visibility: hidden;
+    max-width: 12vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: normal;
+    align-items: flex-end;
+    align-content: normal; */
+}
+
+.noty_theme__origen.noty_bar {
+	/* margin: 5px 0; */
+	/* overflow: hidden; */
+	/* border-radius: 5px; */
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.9;
+	/*border: 2px solid black;*/
+}
+
+.noty_theme__origen.noty_bar .noty_body {
+	/* display: flex; */
+	/* justify-content: flex-end; */
+	/* align-items: flex-start; */
+	padding: 0 0.6vh;
+	/* border: 1px solid #ffffff27; */
+	/* flex-direction: column; */
+	height: max-content;
+	background-color: #ab1f64c4;
+	border-radius: 10px;
+	/* box-shadow: 0 0 20px rgb(255 255 255 / 38%); */
+	width: max-content;
+	transition: cubic-bezier(0.86, -0.01, 0.22, 0.99) 0.3s all;
+	width: 35.5vh;
+	/* overflow: hidden; */
+	/* box-shadow: 0px 0 20px rgb(0 0 0 / 30%); */
+	padding-right: 0;
+	/* border: 0.1vh solid rgb(195 21 101); */
+}
+
+.noty_theme__origen.noty_bar.noty_effects_open .noty_body {
+	width: 3.5vh;
+	border-radius: 100px;
+	height: 3.5vh;
+	/* transform:scale(0.9); */
+}
+
+.noty_theme__origen.noty_bar.noty_effects_open .noty_body .notification-text {
+	height: 3.5vh;
+}
+
+.noty_theme__origen.noty_bar.noty_effects_open .noty_body .notification-content {
+	opacity: 0;
+	color: rgb(255, 208, 0);
+	transform: scale(0.9);
+}
+
+.noty_theme__origen.noty_bar .noty_buttons {
+	padding: 10px;
+}
+
+.noty_theme__origen.noty_type__alert,
+.noty_theme__origen.noty_type__notification {
+	background: unset;
+	color: #fff;
+	box-shadow: unset !important;
+	border: unset;
+	margin-bottom: 1vh;
+}
+
+.noty_theme__origen.noty_type__disparos {
+	background-color: rgba(0, 0, 0, 0.795);
+	color: #fff;
+	box-shadow: 0 0 8px #000;
+}
+
+.noty_theme__origen.noty_type__alert .noty_progressbar,
+.noty_theme__origen.noty_type__notification .noty_progressbar {
+	background-color: rgb(185 0 0 / 72%);
+	/* background-image: url(https://i.imgur.com/Q9HzFKZ.gif); */
+	z-index: -9999999;
+	border-radius: 5px;
+	border-bottom: aliceblue;
+	/* box-shadow: 0 0 10px rgb(185 0 0);*/
+	display: none;
+}
+
+.noty_theme__origen.noty_type__warning {
+	background-color: #ffd166;
+	color: #fff;
+}
+
+@font-face {
+	font-family: bankgothic;
+	src: url('bankgothic.ttf');
+}
+
+.noty_theme__origen.noty_type__error {
+	background-color: #ef476f;
+	color: #fff;
+}
+
+.noty_theme__origen.noty_type__error .noty_progressbar {
+	opacity: 0.4;
+}
+
+.noty_theme__origen.noty_type__info,
+.noty_theme__origen.noty_type__information {
+	background-color: #118ab2;
+	color: #fff;
+}
+
+.noty_theme__origen.noty_type__info .noty_progressbar,
+.noty_theme__origen.noty_type__information .noty_progressbar {
+	opacity: 1;
+}
+
+.noty_theme__origen.noty_type__success {
+	background-color: #06d6a0;
+	color: #fff;
+}
+
+#helpbar {
+	font-family: 'Cairo';
+	/* transform: translate(-50%, -50%); */
+	/* border-radius: 5px; */
+	box-shadow: 0 0 20px #ff005299;
+	background: linear-gradient(45deg, #ff00529c, #cf00a28a);
+	padding: 0vh 1vh;
+	border-radius: 5px;
+	/* letter-spacing: 1.5px;*/
+}
+
+#helpbar .icon-help {
+	width: 3vh;
+	height: 3vh;
+	right: -2.5vh;
+	background: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: -0.45vh;
+	border-radius: 5px;
+	box-shadow: 0 0 10px #ffffff87;
+	font-family: 'bankgothic';
+	font-weight: 100;
+	font-size: 1.5vh;
+	color: black;
+	position: absolute;
+}
+
+#helpText {
+	font-family: 'Cairo';
+	font-size: 1.2vh;
+	color: #ffffff;
+	text-align: left;
+	max-width: 150px;
+	text-align: left;
+	max-width: 300px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.icono img {
+	width: 15px;
+	margin-left: 5px;
+}
+
+.noty__img {
+	width: 2.5vh;
+}
+
+.mensaje {
+	/* border-left: 1px solid #ffffff8c; */
+	height: fit-content;
+	/* background-color: white; */
+	border-radius: 5px;
+	/* padding: 0.3vh .5vh; */
+	background: linear-gradient(181deg, rgb(255 233 241 / 40%), white);
+	box-shadow: rgb(0 0 0 / 18%) 0px 0px 10px, inset 0 0 20px 20px #ffffff52;
+	width: 100%;
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	/* animation:circulo 0.5s cubic-bezier(0.000, 0.515, 0.200, 1.650) forwards; */
+}
+
+.glitch {
+	line-height: 1.5vh;
+	width: 0;
+	opacity: 0;
+	animation: text-anim 0.5s cubic-bezier(0, 0.405, 0.245, 1.47) forwards;
+	animation-delay: 0.7s;
+	padding: 0;
+	height: 0;
+	overflow: hidden;
+	white-space: pre-line;
+}
+
+.help-in {
+	animation: help-in cubic-bezier(0, 0.515, 0.2, 1.65) 0.3s forwards;
+}
+
+.help-out {
+	animation: help-out cubic-bezier(0.385, -0.46, 1, -0.005) 0.3s forwards;
+}
+
+/* Creates an animation with 20 steaps. For each step, it calculates
+a percentage for the specific step. It then generates a random clip
+box to be used for the random glitch effect. Also adds a very subtle
+skew to change the 'thickness' of the glitch.*/
+
+@keyframes brillo {
+	0% {
+		filter: brightness(1);
+	}
+	50% {
+		filter: brightness(2);
+	}
+	100% {
+		filter: brightness(1);
+	}
+}
+
+@keyframes shake-slow {
+	0% {
+		transform: translate(0, 0) rotate(0);
+	}
+	15% {
+		transform: translate(4px, 2px) rotate(-0.1deg);
+	}
+	30% {
+		transform: translate(3px, -5px) rotate(0.5deg);
+	}
+	50% {
+		transform: translate(4px, -3px) rotate(-0.5deg);
+	}
+	70% {
+		transform: translate(-3px, 3px) rotate(1.2deg);
+	}
+	85% {
+		transform: translate(-3px, 3px) rotate(1.2deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(0);
+	}
+}
+
+@keyframes help-in {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 100;
+		transform: translateX(0);
+	}
+}
+
+@keyframes help-out {
+	0% {
+		opacity: 100;
+		transform: translateX(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	25% {
+		transform: scale(1.1);
+	}
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+@keyframes girar {
+	0% {
+		transform: rotate(-10deg) translateY(0.1vw);
+	}
+	50% {
+		transform: rotate(10deg) translateY(0.1vw);
+	}
+	100% {
+		transform: rotate(-10deg) translateY(0.1vw);
+	}
+}
+
+@keyframes entrada-titulo {
+	0% {
+		transform: translateX(2vw);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0vw);
+		opacity: 100;
+	}
+}
+
+@keyframes entrada-noti1 {
+	0% {
+		width: 3.5vh;
+		display: block;
+	}
+	100% {
+		width: 23vh;
+		border-radius: 100%;
+	}
+}
+
+@keyframes text-anim {
+	0% {
+		padding: 0;
+		width: 0;
+		opacity: 0;
+	}
+
+	100% {
+		padding: 0.3vh 1vh;
+		width: 100%;
+		opacity: 1;
+		height: auto;
+	}
+}
+
+@keyframes circulo {
+	0% {
+		border-radius: 100%;
+	}
+
+	100% {
+		border-radius: 5px;
+	}
+}
